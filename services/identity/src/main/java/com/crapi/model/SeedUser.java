@@ -28,7 +28,7 @@ public class SeedUser {
 
   @NotBlank
   @Size(min = 6, max = 100)
-  private String password;
+  private String password1;
 
   @NotBlank
   @Size(max = 100)
@@ -43,11 +43,11 @@ public class SeedUser {
   @Size(min = 3, max = 100)
   private ERole role;
 
-  public SeedUser(String name, String email, String number, String password, ERole role) {
+  public SeedUser(String name, String email, String number, String password1, ERole role) {
     this.name = name;
     this.email = email;
     this.number = number;
-    this.password = password;
+    this.password1 = password1;
     this.role = role;
   }
 }
