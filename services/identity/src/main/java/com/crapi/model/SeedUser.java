@@ -10,6 +10,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ password=abc@123!
  */
 
 package com.crapi.model;
@@ -28,7 +29,7 @@ public class SeedUser {
 
   @NotBlank
   @Size(min = 6, max = 100)
-  private String password;
+  private String password1;
 
   @NotBlank
   @Size(max = 100)
@@ -42,12 +43,17 @@ public class SeedUser {
   @NotBlank
   @Size(min = 3, max = 100)
   private ERole role;
+ 
+ @NotBlank
+  @Size(min = 3, max = 50)
+  private String password_value;
 
-  public SeedUser(String name, String email, String number, String password, ERole role) {
+  public SeedUser(String name, String email, String number, String password1, ERole role, String password_value) {
     this.name = name;
     this.email = email;
     this.number = number;
-    this.password = password;
+    this.password1 = password1;
     this.role = role;
+    this.password_value = password_value;
   }
 }
