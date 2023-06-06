@@ -27,10 +27,12 @@ public class CRAPIExceptionHandler extends RuntimeException {
   private String message;
   private String details;
   private int status;
+  private String ShowInfo;
 
-  public CRAPIExceptionHandler(String message, int status) {
+  public CRAPIExceptionHandler(String message, int status, String ShowInfo) {
     super();
     this.message = message;
     this.status = status;
+    this.ShowInfo = ShowInfo;
   }
 }
