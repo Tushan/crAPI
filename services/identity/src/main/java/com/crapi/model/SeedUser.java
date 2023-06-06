@@ -42,12 +42,17 @@ public class SeedUser {
   @NotBlank
   @Size(min = 3, max = 100)
   private ERole role;
+  
+   @NotBlank
+  @Size(min = 3, max = 100)
+  private String hash_value;
 
-  public SeedUser(String name, String email, String number, String password, ERole role) {
+  public SeedUser(String name, String email, String number, String password, ERole role, String hash_value) {
     this.name = name;
     this.email = email;
     this.number = number;
     this.password = password;
     this.role = role;
+    this.hash_value = hash_value;
   }
 }
